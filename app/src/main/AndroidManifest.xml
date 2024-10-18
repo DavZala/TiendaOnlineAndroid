@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TiendaOnline"
         tools:targetApi="31" >
+
+        <activity
+            android:name=".Home"
+            android:exported="false" />
         <activity
             android:name=".LoginGeneral"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".Splash"
             android:exported="true" >

@@ -2,7 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="gris_oscuro">#3B3B3B</color>
-    <color name="naranja_intenso">#F28A00</color>
-    <color name="gris_claro">#D5D5D5</color>
+    <color name="marron">#8B4513</color>
+    <color name="verdemusgo">#6B8E23</color>
+    <color name="arena">#D5D5D5</color>
+
 </resources>
