@@ -9,4 +9,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="Eslogal_Splash1">Escucha tu alma</string>
+    <string name="Eslogal_Splash2">Explora el Mundo.</string>
+    <string name="tendencia">Tendencia</string>
+    <string name="vertodo">Ver Mas</string>
+    <string name="buscar">Buscar</string>
 </resources>
