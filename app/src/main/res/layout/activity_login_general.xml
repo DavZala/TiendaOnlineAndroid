@@ -59,6 +59,7 @@
         android:background="@drawable/button_border"
         android:text="@string/registro"
         android:textColor="@color/arena"
+        android:textColorLink="#FFFFFF"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
