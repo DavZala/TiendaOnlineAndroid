@@ -57,11 +57,12 @@
 
             <!-- Iconos de notificaciones y perfil -->
             <ImageView
+                android:id="@+id/carrito"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/carritodecompras"
-                android:contentDescription="Carrito"/>
+                android:contentDescription="Carrito"
+                android:src="@drawable/carritodecompras" />
 
             <ImageView
                 android:layout_width="32dp"
