@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TiendaOnline</string>
+    <string name="app_name">CampNatur</string>
     <string name="name_company">UBTH</string>
     <string name="olvido_su_contrasena">¿Olvido su Contraseña?</string>
     <string name="iniciar_sesion">Iniciar Sesion</string>
@@ -15,4 +15,5 @@
     <string name="vertodo">Ver Mas</string>
     <string name="buscar">Buscar</string>
     <string name="popular">Popular</string>
+    <string name="correo_electronico">Correo Electronico</string>
 </resources>

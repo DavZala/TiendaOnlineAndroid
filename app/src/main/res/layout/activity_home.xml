@@ -14,32 +14,49 @@
         android:orientation="vertical"
         android:paddingHorizontal="8dp">
 
-        <!-- Sección de bienvenida -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hola 👋"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alexandra"
-                android:textSize="24sp"
-                android:layout_marginStart="8dp"
-                android:textColor="@android:color/darker_gray" />
-        </LinearLayout>
+        <!-- Toolbar superior-->
 
         <!-- Barra de búsqueda -->
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@color/verdemusgo">
+
+            <!-- Sección de bienvenida -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hola 👋"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Usuario"
+                    android:textColor="@color/arena"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/carrito"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="95dp"
+                    android:contentDescription="Carrito"
+                    android:src="@drawable/carrito" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,21 +72,6 @@
                 android:hint="Buscar"
                 android:padding="12dp" />
 
-            <!-- Iconos de notificaciones y perfil -->
-            <ImageView
-                android:id="@+id/carrito"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="8dp"
-                android:contentDescription="Carrito"
-                android:src="@drawable/carritodecompras" />
-
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/usuario"
-                android:contentDescription="Profile" />
         </LinearLayout>
 
         <!-- Sección de Trending Campsites -->
@@ -93,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:layout_marginStart="64dp"
+                android:layout_marginStart="30dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="Ver más"
@@ -195,7 +197,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="64dp"
+                android:layout_marginStart="30dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="Ver más"
