@@ -45,41 +45,5 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:layout_width="294dp"
-        android:layout_height="186dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182">
-
-        <!-- Botones para CRUD -->
-
-        <Button
-            android:id="@+id/btnCrear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/anadir"
-            android:text="Crear Producto" />
-
-        <Button
-            android:id="@+id/btnEditar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/editar"
-            android:text="Editar Producto" />
-
-        <Button
-            android:id="@+id/btnEliminar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/delete"
-            android:text="Eliminar Producto" />
-
-    </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 

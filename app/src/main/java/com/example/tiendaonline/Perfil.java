@@ -47,13 +47,5 @@ public class Perfil extends AppCompatActivity {
         });
 
 
-        Button crear = findViewById(R.id.btnCrear);
-        crear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Perfil.this, CrearProducto.class);
-                startActivity(intent);
-            }
-        });
     }
 }
