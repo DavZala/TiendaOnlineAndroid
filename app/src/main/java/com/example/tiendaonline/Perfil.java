@@ -3,6 +3,7 @@ package com.example.tiendaonline;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -35,13 +36,23 @@ public class Perfil extends AppCompatActivity {
             }
         });
         ImageView cerarsesion = findViewById(R.id.btn_cerrarsesion);
-       // cerarsesion.setOnClickListener(View -> GoogleSignInHelper.signOut(this));
+        // cerarsesion.setOnClickListener(View -> GoogleSignInHelper.signOut(this));
         cerarsesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Perfil.this, LoginGeneral.class);
                 startActivity(intent);
                 GoogleSignInHelper.signOut(Perfil.this);
+            }
+        });
+
+
+        Button crear = findViewById(R.id.btnCrear);
+        crear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this, CrearProducto.class);
+                startActivity(intent);
             }
         });
     }
