@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/main"
+    android:background="#F9F9F9">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/verdemusgo"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <!-- Botón de volver -->
+        <ImageButton
+            android:id="@+id/volver"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/volver"
+            android:layout_marginStart="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Back"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- Título -->
+
+        <!-- Espacio para posibles íconos adicionales -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalles del Producto"
+            android:textStyle="bold"
+            android:layout_marginStart="25dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="Notifications"
+            android:src="@drawable/perfil" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Imagen del producto -->
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerInside"/>
+
+        <!-- Nombre del producto -->
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Precio del producto -->
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Descripción del producto -->
+        <TextView
+            android:id="@+id/product_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción del producto"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Botón añadir al carrito -->
+        <Button
+            android:id="@+id/add_to_cart_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Añadir al Carrito"
+            android:backgroundTint="@color/verdemusgo"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Sección de valoraciones -->
+        <TextView
+            android:id="@+id/review_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valoraciones"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"/>
+
+        <RatingBar
+            android:id="@+id/product_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="4.0"
+            android:stepSize="0.5"
+            android:progressTint="@color/verdemusgo"
+            android:secondaryProgressTint="@color/verdemusgo"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Información adicional sobre el producto -->
+        <TextView
+            android:id="@+id/related_products_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Productos Relacionados"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp" />
+
+        <!-- Pie de página con enlaces de política -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Términos y condiciones"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Política de privacidad"
+                android:textSize="12sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+

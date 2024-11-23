@@ -33,7 +33,6 @@ android {
         //viewBinding = true
     }
 }
-
 dependencies {
 
     implementation(libs.appcompat)
@@ -54,5 +53,4 @@ dependencies {
     implementation("com.google.android.gms:play-services-location:21.3.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     implementation("com.google.android.gms:play-services-location-license:12.0.1")
-
 }

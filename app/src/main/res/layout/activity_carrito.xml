@@ -1,283 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".Carrito">
+    android:id="@+id/main"
+    android:padding="16dp">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <!-- Top Bar -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/verdemusgo"
+        android:padding="8dp"
+        android:gravity="center_vertical">
 
-        <!-- Toolbar superior con botón de volver y contador de productos -->
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
+        <!-- Botón de volver -->
+        <ImageButton
+            android:id="@+id/volver"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/volver"
+            android:layout_marginStart="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Back"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- Título -->
+
+        <!-- Espacio para posibles íconos adicionales -->
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/verdemusgo"
-            android:elevation="4dp"
-            android:padding="16dp">
+            android:text="Carrito de Compras"
+            android:textStyle="bold"
+            android:layout_marginStart="25dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Carrito de Compra"
-                android:textSize="20sp"
-                android:textColor="@android:color/white"
-                android:layout_gravity="center"
-                android:layout_marginStart="16dp"
-                android:textStyle="bold"/>
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/btn_carrito"
-                android:layout_gravity="end"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/compra"/>
+    <!-- Lista de Productos en el Carrito -->
+    <ListView
+        android:id="@+id/lista_carrito"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-                android:textSize="16sp"
-                android:textColor="@android:color/white"
-                android:layout_gravity="end"
-                android:layout_marginStart="8dp"
-                android:padding="4dp"/>
-
-            <ImageView
-                android:id="@+id/btn_volver"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:contentDescription=""
-                android:src="@drawable/volver" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-        <!-- Contenido del carrito -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- Lista de productos en el carrito -->
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <!-- Producto individual -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="12dp"
-                        android:background="#ffffff"
-                        android:elevation="2dp"
-                        android:layout_marginTop="65dp"
-                        android:layout_marginBottom="8dp">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/produc1"
-                            android:contentDescription="Imagen del producto"
-                            android:layout_marginEnd="12dp"/>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Linterna Recargable"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Code: 2564789"
-                                android:textSize="14sp"
-                                android:textColor="@android:color/darker_gray"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$10,99 USD"
-                                android:textSize="16sp"
-                                android:textColor="@color/verdemusgo"
-                                android:textStyle="bold"/>
-                        </LinearLayout>
-
-
-                        <!-- Botones de aumentar y disminuir cantidad -->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/btn_añadir"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/mas" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:gravity="center"
-                                android:text="2"
-                                android:textSize="16sp" />
-
-                            <ImageView
-                                android:id="@+id/btn_eliminar1"
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:src="@drawable/menos" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <!-- Producto individual -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="12dp"
-                        android:background="#ffffff"
-                        android:elevation="2dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="8dp">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/produc2"
-                            android:contentDescription="Imagen del producto"
-                            android:layout_marginEnd="12dp"/>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Hamaca de Camping"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Code: 2564723"
-                                android:textSize="14sp"
-                                android:textColor="@android:color/darker_gray"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$80,02 USD"
-                                android:textSize="16sp"
-                                android:textColor="@color/verdemusgo"
-                                android:textStyle="bold"/>
-                        </LinearLayout>
-
-
-                        <!-- Botones de aumentar y disminuir cantidad -->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/btn_añadir2"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/mas" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:gravity="center"
-                                android:text="1"
-                                android:textSize="16sp" />
-
-                            <ImageView
-                                android:id="@+id/btn_eliminar2"
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:src="@drawable/menos" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </LinearLayout>
-            </ScrollView>
-
-            <!-- Sección de código de cupón y resumen de total -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TOTAL : $102,00 USD"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/holo_red_light"
-                    android:padding="15dp"
-                    android:layout_marginStart="85dp"/>
-            </LinearLayout>
-
-            <!-- Botones de Checkout -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="16dp">
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pagar Ahora"
-                    android:backgroundTint="@color/verdemusgo"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="8dp"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Pagar con PayPal"
-                android:backgroundTint="@android:color/holo_blue_dark"
-                android:textColor="@android:color/white"
-                android:textSize="16sp" />
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Total del Carrito -->
+    <TextView
+        android:id="@+id/total_carrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: $0.00"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="16dp" />
+</LinearLayout>
