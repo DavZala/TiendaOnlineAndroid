@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -22,50 +23,37 @@
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:src="@drawable/volver"
-            android:layout_marginStart="20dp"
             android:background="?android:attr/selectableItemBackground"
-            android:contentDescription="Back"
-            android:layout_marginEnd="12dp"/>
+            android:contentDescription="Volver" />
 
         <!-- Título -->
-
-        <!-- Espacio para posibles íconos adicionales -->
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Carrito de Compras"
+            android:text="Métodos de Pago"
             android:textStyle="bold"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="55dp"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
-
     </LinearLayout>
 
-    <!-- Lista de Productos en el Carrito -->
+    <!-- Lista de métodos de pago -->
     <ListView
-        android:id="@+id/lista_carrito"
+        android:id="@+id/lista_metodos_pago"
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:divider="@android:color/darker_gray"
+        android:divider="@android:color/black"
         android:dividerHeight="1dp" />
 
-    <!-- Total del Carrito -->
-    <TextView
-        android:id="@+id/total_carrito"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Total: $0.00"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:padding="16dp" />
+    <!-- Botón para añadir nuevo método de pago -->
     <Button
-        android:id="@+id/add_product"
+        android:id="@+id/btn_add_metodo_pago"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:backgroundTint="#003087"
-        android:text="Pagar Ahora" />
+        android:backgroundTint="@color/verdemusgo"
+        android:text="Añadir Método de Pago"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

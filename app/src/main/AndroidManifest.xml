@@ -27,6 +27,9 @@
         android:theme="@style/Theme.TiendaOnline"
         tools:targetApi="31">
         <activity
+            android:name=".MetodosPago"
+            android:exported="false" />
+        <activity
             android:name=".Detallesproducto"
             android:exported="false" />
 

@@ -36,16 +36,10 @@
             android:layout_height="wrap_content"
             android:text="Detalles del Producto"
             android:textStyle="bold"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="15dp"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
-        <ImageView
-            android:layout_width="72dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="4dp"
-            android:contentDescription="Notifications"
-            android:src="@drawable/perfil" />
     </LinearLayout>
 
 
